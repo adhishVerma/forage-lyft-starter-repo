@@ -11,7 +11,7 @@ from car.model.thovex import Thovex
 class TestCalliope(unittest.TestCase):
     def test_battery_should_be_serviced(self):
         today = datetime.today().date()
-        last_service_date = today.replace(year=today.year - 3)
+        last_service_date = today.replace(year=today.year - 4)
         current_mileage = 0
         last_service_mileage = 0
 
@@ -43,11 +43,19 @@ class TestCalliope(unittest.TestCase):
         car = Calliope(last_service_date, current_mileage, last_service_mileage)
         self.assertFalse(car.needs_service())
 
+    def test_tires_should_be_serviced(self):
+        last_service_date = datetime.today().date()
+        current_mileage = 0
+        last_service_mileage = 0
+
+        car = Calliope(last_service_date, current_mileage, last_service_mileage, [1,1,1,0.5])
+        self.assertTrue(car.needs_service())        
+
 
 class TestGlissade(unittest.TestCase):
     def test_battery_should_be_serviced(self):
         today = datetime.today().date()
-        last_service_date = today.replace(year=today.year - 3)
+        last_service_date = today.replace(year=today.year - 4)
         current_mileage = 0
         last_service_mileage = 0
 
