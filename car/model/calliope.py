@@ -1,7 +1,7 @@
 from car.car import Car
 
-from engine.capulet_engine import CapuletEngine
-from battery.spindler_battery import SpindlerBattery
+from car.engine.capulet_engine import CapuletEngine
+from car.battery.spindler_battery import SpindlerBattery
 
 
 class Calliope(Car):

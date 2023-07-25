@@ -1,7 +1,7 @@
 from car.car import Car
 
-from engine.capulet_engine import CapuletEngine
-from battery.nubbin_battery import NubbinBattery
+from car.engine.capulet_engine import CapuletEngine
+from car.battery.nubbin_battery import NubbinBattery
 
 
 class Thovex(Car):
